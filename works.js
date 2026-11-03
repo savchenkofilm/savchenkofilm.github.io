@@ -204,7 +204,7 @@ window.WORKS = [
   ],
   "w": 1280,
   "h": 720,
-  "poster": "media/hse-graduation.jpg?v=0b3543cb",
+  "poster": "media/hse-graduation.jpg?v=1a6a8bbd",
   "loop": "media/hse-graduation_loop.mp4?v=e809e09c"
  },
  {
