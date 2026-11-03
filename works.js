@@ -8,6 +8,7 @@ window.WORKS = [
    "art",
    "head"
   ],
+  "big": true,
   "w": 2160,
   "h": 3840,
   "poster": "media/florensky.jpg",
@@ -57,6 +58,21 @@ window.WORKS = [
   "loop": "media/alumni-ushakova_loop.mp4"
  },
  {
+  "id": "niva-vibe",
+  "title": "Нива. Город",
+  "client": "",
+  "tags": [
+   "art",
+   "ai"
+  ],
+  "title_en": "Niva. The city",
+  "w": 1660,
+  "h": 1244,
+  "poster": "media/niva-vibe.jpg",
+  "loop": "media/niva-vibe_loop.mp4",
+  "video": "media/niva-vibe.mp4"
+ },
+ {
   "id": "404zero",
   "url": "https://vimeo.com/595230494",
   "title": "404.zero",
@@ -69,6 +85,20 @@ window.WORKS = [
   "h": 450,
   "poster": "media/404zero.jpg",
   "loop": "media/404zero_loop.mp4"
+ },
+ {
+  "id": "neklessa",
+  "title": "Лиза Неклесса",
+  "title_en": "Liza Neklessa",
+  "client": "Odra",
+  "tags": [
+   "art"
+  ],
+  "w": 1080,
+  "h": 1920,
+  "poster": "media/neklessa.jpg",
+  "loop": "media/neklessa_loop.mp4",
+  "video": "media/neklessa.mp4"
  },
  {
   "id": "niva-roadster",
@@ -113,35 +143,6 @@ window.WORKS = [
    "event"
   ],
   "poster": "media/vimeo_323714806.jpg"
- },
- {
-  "id": "neklessa",
-  "title": "Лиза Неклесса",
-  "title_en": "Liza Neklessa",
-  "client": "Odra",
-  "tags": [
-   "art"
-  ],
-  "w": 1080,
-  "h": 1920,
-  "poster": "media/neklessa.jpg",
-  "loop": "media/neklessa_loop.mp4",
-  "video": "media/neklessa.mp4"
- },
- {
-  "id": "niva-vibe",
-  "title": "Нива. Город",
-  "client": "",
-  "tags": [
-   "art",
-   "ai"
-  ],
-  "title_en": "Niva. The city",
-  "w": 1660,
-  "h": 1244,
-  "poster": "media/niva-vibe.jpg",
-  "loop": "media/niva-vibe_loop.mp4",
-  "video": "media/niva-vibe.mp4"
  },
  {
   "w": 4096,

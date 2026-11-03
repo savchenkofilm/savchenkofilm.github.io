@@ -170,9 +170,21 @@
   function spansFor(w, cols) {
     const r = w.w / w.h;
     const kind = r > 1.25 ? "h" : r < 0.8 ? "v" : "s";
-    if (cols >= 12) return { h: [3, 4, 4, 5, 6], s: [2, 3, 3, 4], v: [2, 2, 3] }[kind];
-    if (cols >= 8) return { h: [4, 5, 5], s: [3], v: [2, 3] }[kind];
-    return { h: [4, 4, 3], s: [2], v: [2] }[kind];
+    const list =
+      cols >= 12
+        ? { h: [3, 4, 4, 5, 6], s: [2, 3, 3, 4], v: [2, 2, 3] }[kind]
+        : cols >= 8
+        ? { h: [4, 5, 5], s: [3], v: [2, 3] }[kind]
+        : { h: [4, 4, 3], s: [2], v: [2] }[kind];
+    // "big": true в works.json — карточка на ступень крупнее максимума.
+    return w.big ? [Math.max(...list) + 1] : list;
+  }
+
+  // В общей выкладке AI-работы держатся справа, остальные — слева и в центре.
+  function inZone(w, s, span, cols) {
+    if (current !== "all" || cols < 8) return true;
+    if (w.tags.includes("ai")) return s >= Math.max(cols / 2, cols - span - 2) || s === cols - span;
+    return s + span <= Math.max(span, Math.ceil(cols * 0.65));
   }
 
   function layout() {
@@ -195,7 +207,8 @@
       const height = width * (c.w.h / c.w.w);
 
       const tops = [];
-      for (let s = 0; s + span <= cols; s++) tops.push([s, Math.max(...sky.slice(s, s + span))]);
+      for (let s = 0; s + span <= cols; s++)
+        if (inZone(c.w, s, span, cols)) tops.push([s, Math.max(...sky.slice(s, s + span))]);
       const min = Math.min(...tops.map((t) => t[1]));
       const near = tops.filter((t) => t[1] <= min + unit * 1.4);
       const [s, top] = pick(r, near);
