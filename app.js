@@ -3,6 +3,7 @@
     ["all", "Все", "All"],
     ["art", "Художественные", "Art"],
     ["ads", "Реклама", "Commercial"],
+    ["event", "События", "Events"],
     ["ai", "AI", "AI"],
     ["head", "Говорящая голова", "Talking head"],
     ["anim", "Анимация", "Animation"],
@@ -28,7 +29,7 @@
   try {
     lang = localStorage.getItem(LANG_KEY);
   } catch (e) {}
-  if (!I18N[lang]) lang = (navigator.language || "").toLowerCase().startsWith("ru") ? "ru" : "en";
+  if (!I18N[lang]) lang = "en";
   // Поле работы на текущем языке: title_en / client_en, если заданы.
   const txt = (w, key) => (lang === "en" && w[key + "_en"]) || w[key] || "";
   const works = window.WORKS || [];

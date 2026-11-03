@@ -16,46 +16,45 @@ window.WORKS = [
   "video": "media/therapy.mp4"
  },
  {
-  "w": 1920,
-  "h": 1536,
-  "id": "megafon-shcherbakov",
-  "url": "https://vimeo.com/709500040",
-  "title": "Щербаков × МегаФон",
-  "client": "МегаФон",
+  "id": "alumni-ushakova",
+  "url": "https://vimeo.com/865538958",
+  "title": "Alumni Talk #3. Полина Ушакова",
+  "client": "",
+  "tags": [
+   "head"
+  ],
+  "title_en": "Alumni Talk #3. Polina Ushakova",
+  "w": 1280,
+  "h": 720,
+  "poster": "media/alumni-ushakova.jpg",
+  "loop": "media/alumni-ushakova_loop.mp4"
+ },
+ {
+  "id": "florensky",
+  "title": "Иван Флоренский",
+  "title_en": "Ivan Florensky",
+  "client": "Odra",
+  "tags": [
+   "art",
+   "head"
+  ],
+  "w": 2160,
+  "h": 3840,
+  "poster": "media/florensky.jpg",
+  "loop": "media/florensky_loop.mp4",
+  "video": "media/florensky.mp4"
+ },
+ {
+  "w": 3840,
+  "h": 2160,
+  "id": "the-mato",
+  "url": "https://vimeo.com/732263148",
+  "title": "The Mato",
+  "client": "",
   "tags": [
    "ads"
   ],
-  "poster": "media/vimeo_709500040.jpg",
-  "title_en": "Shcherbakov × MegaFon",
-  "client_en": "MegaFon"
- },
- {
-  "id": "visarun",
-  "title": "Больше никаких визаранов",
-  "client": "TAI",
-  "tags": [
-   "ads",
-   "head"
-  ],
-  "title_en": "No more visa runs",
-  "client_en": "TAI",
-  "w": 1080,
-  "h": 1920,
-  "poster": "media/visarun.jpg",
-  "loop": "media/visarun_loop.mp4",
-  "video": "media/visarun.mp4"
- },
- {
-  "w": 1920,
-  "h": 1080,
-  "id": "gesaffelstein",
-  "url": "https://vimeo.com/232950940",
-  "title": "Gesaffelstein in Space Moscow",
-  "client": "",
-  "tags": [
-   "art"
-  ],
-  "poster": "media/vimeo_232950940.jpg"
+  "poster": "media/vimeo_732263148.jpg"
  },
  {
   "id": "niva-roadster",
@@ -73,32 +72,33 @@ window.WORKS = [
   "video": "media/niva-roadster.mp4"
  },
  {
-  "w": 1,
-  "h": 1,
-  "id": "megafon-skate",
-  "url": "https://vimeo.com/359290004",
-  "title": "Скейт. Максим Круглов",
+  "w": 1920,
+  "h": 1536,
+  "id": "megafon-shcherbakov",
+  "url": "https://vimeo.com/709500040",
+  "title": "Щербаков × МегаФон",
   "client": "МегаФон",
   "tags": [
-   "ads"
+   "ads",
+   "head",
+   "art"
   ],
-  "poster": "media/vimeo_359290004.jpg",
-  "title_en": "Skate. Maxim Kruglov",
+  "poster": "media/vimeo_709500040.jpg",
+  "title_en": "Shcherbakov × MegaFon",
   "client_en": "MegaFon"
  },
  {
-  "w": 4096,
-  "h": 2160,
-  "id": "s7-jazz",
-  "url": "https://vimeo.com/429153343",
-  "title": "Усадьба Jazz",
-  "client": "S7 Airlines",
+  "w": 1920,
+  "h": 1012,
+  "id": "secret-bar",
+  "url": "https://vimeo.com/323714806",
+  "title": "Secret bar",
+  "client": "",
   "tags": [
-   "ads"
+   "ads",
+   "event"
   ],
-  "poster": "media/vimeo_429153343.jpg",
-  "title_en": "Usadba Jazz",
-  "client_en": "S7 Airlines"
+  "poster": "media/vimeo_323714806.jpg"
  },
  {
   "id": "emu",
@@ -122,26 +122,13 @@ window.WORKS = [
   "title": "404.zero",
   "client": "",
   "tags": [
-   "art"
+   "art",
+   "head"
   ],
   "w": 360,
   "h": 450,
   "poster": "media/404zero.jpg",
   "loop": "media/404zero_loop.mp4"
- },
- {
-  "id": "alumni-ushakova",
-  "url": "https://vimeo.com/865538958",
-  "title": "Alumni Talk #3. Полина Ушакова",
-  "client": "",
-  "tags": [
-   "head"
-  ],
-  "title_en": "Alumni Talk #3. Polina Ushakova",
-  "w": 1280,
-  "h": 720,
-  "poster": "media/alumni-ushakova.jpg",
-  "loop": "media/alumni-ushakova_loop.mp4"
  },
  {
   "id": "niva-vibe",
@@ -159,30 +146,32 @@ window.WORKS = [
   "video": "media/niva-vibe.mp4"
  },
  {
-  "w": 1,
-  "h": 1,
-  "id": "megafon-football",
-  "url": "https://vimeo.com/359289821",
-  "title": "Уличный футбол. Жан-Пьер Папен",
-  "client": "МегаФон",
+  "w": 4096,
+  "h": 2160,
+  "id": "s7-jazz",
+  "url": "https://vimeo.com/429153343",
+  "title": "Усадьба Jazz",
+  "client": "S7 Airlines",
   "tags": [
-   "ads"
+   "ads",
+   "event"
   ],
-  "poster": "media/vimeo_359289821.jpg",
-  "title_en": "Street football. Jean-Pierre Papin",
-  "client_en": "MegaFon"
+  "poster": "media/vimeo_429153343.jpg",
+  "title_en": "Usadba Jazz",
+  "client_en": "S7 Airlines"
  },
  {
-  "w": 3840,
-  "h": 2160,
-  "id": "the-mato",
-  "url": "https://vimeo.com/732263148",
-  "title": "The Mato",
+  "id": "tinto",
+  "url": "https://vimeo.com/334638712",
+  "title": "Tinto",
   "client": "",
   "tags": [
    "ads"
   ],
-  "poster": "media/vimeo_732263148.jpg"
+  "w": 1280,
+  "h": 720,
+  "poster": "media/tinto.jpg",
+  "loop": "media/tinto_loop.mp4"
  },
  {
   "id": "suite",
@@ -200,17 +189,47 @@ window.WORKS = [
   "video": "media/suite.mp4"
  },
  {
-  "id": "tinto",
-  "url": "https://vimeo.com/334638712",
-  "title": "Tinto",
+  "w": 1920,
+  "h": 1080,
+  "id": "gesaffelstein",
+  "url": "https://vimeo.com/232950940",
+  "title": "Gesaffelstein in Space Moscow",
   "client": "",
   "tags": [
-   "ads"
+   "art",
+   "event"
   ],
-  "w": 1280,
-  "h": 720,
-  "poster": "media/tinto.jpg",
-  "loop": "media/tinto_loop.mp4"
+  "poster": "media/vimeo_232950940.jpg"
+ },
+ {
+  "w": 1,
+  "h": 1,
+  "id": "megafon-skate",
+  "url": "https://vimeo.com/359290004",
+  "title": "Скейт. Максим Круглов",
+  "client": "МегаФон",
+  "tags": [
+   "ads",
+   "head"
+  ],
+  "poster": "media/vimeo_359290004.jpg",
+  "title_en": "Skate. Maxim Kruglov",
+  "client_en": "MegaFon"
+ },
+ {
+  "w": 1,
+  "h": 1,
+  "id": "megafon-football",
+  "url": "https://vimeo.com/359289821",
+  "title": "Уличный футбол. Жан-Пьер Папен",
+  "client": "МегаФон",
+  "tags": [
+   "ads",
+   "head"
+  ],
+  "poster": "media/vimeo_359289821.jpg",
+  "title_en": "Street football. Jean-Pierre Papin",
+  "client_en": "MegaFon"
  },
  {
   "w": 1,
@@ -220,22 +239,11 @@ window.WORKS = [
   "title": "BMX. Макс Чуприна",
   "client": "МегаФон",
   "tags": [
-   "ads"
+   "ads",
+   "head"
   ],
   "poster": "media/vimeo_359289722.jpg",
   "title_en": "BMX. Max Chuprina",
   "client_en": "MegaFon"
- },
- {
-  "w": 1920,
-  "h": 1012,
-  "id": "secret-bar",
-  "url": "https://vimeo.com/323714806",
-  "title": "Secret bar",
-  "client": "",
-  "tags": [
-   "ads"
-  ],
-  "poster": "media/vimeo_323714806.jpg"
  }
 ];
