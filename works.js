@@ -117,6 +117,21 @@ window.WORKS = [
   "video": "media/mercedes.mp4?v=5f43f843"
  },
  {
+  "id": "hse-parygina",
+  "url": "https://www.youtube.com/watch?v=wR4HWbZ9JCM",
+  "title": "Alumni Talk #5. Полина Парыгина",
+  "title_en": "Alumni Talk #5. Polina Parygina",
+  "client": "Школа дизайна НИУ ВШЭ",
+  "client_en": "HSE Art and Design School",
+  "tags": [
+   "head"
+  ],
+  "w": 960,
+  "h": 720,
+  "poster": "media/hse-parygina.jpg?v=967fd71d",
+  "loop": "media/hse-parygina_loop.mp4?v=c22e4fdf"
+ },
+ {
   "id": "niva-roadster",
   "title": "Нива. Трамплин",
   "client": "",
@@ -148,6 +163,22 @@ window.WORKS = [
   "client_en": "MegaFon"
  },
  {
+  "id": "hse-event-design",
+  "url": "https://www.youtube.com/watch?v=dm-oU4t3Mm8",
+  "title": "Что такое ивент-дизайн",
+  "title_en": "What is event design",
+  "client": "Школа дизайна НИУ ВШЭ",
+  "client_en": "HSE Art and Design School",
+  "tags": [
+   "ads",
+   "head"
+  ],
+  "w": 1280,
+  "h": 720,
+  "poster": "media/hse-event-design.jpg?v=977ff863",
+  "loop": "media/hse-event-design_loop.mp4?v=d33bba98"
+ },
+ {
   "w": 1920,
   "h": 1012,
   "id": "secret-bar",
@@ -159,6 +190,21 @@ window.WORKS = [
    "event"
   ],
   "poster": "media/vimeo_323714806.jpg"
+ },
+ {
+  "id": "hse-graduation",
+  "url": "https://www.youtube.com/watch?v=whI9MSv-mYA",
+  "title": "Выпускной Школы дизайна 2023",
+  "title_en": "Design School graduation 2023",
+  "client": "Школа дизайна НИУ ВШЭ",
+  "client_en": "HSE Art and Design School",
+  "tags": [
+   "event"
+  ],
+  "w": 1280,
+  "h": 720,
+  "poster": "media/hse-graduation.jpg?v=887b6c3a",
+  "loop": "media/hse-graduation_loop.mp4?v=aafbb0c7"
  },
  {
   "w": 4096,
@@ -189,6 +235,22 @@ window.WORKS = [
   "loop": "media/tinto_loop.mp4?v=e98aef7f"
  },
  {
+  "id": "hse-potapov",
+  "url": "https://www.youtube.com/watch?v=LleSlts5T3k",
+  "title": "Современная живопись. Владимир Потапов",
+  "title_en": "Contemporary painting. Vladimir Potapov",
+  "client": "Школа дизайна НИУ ВШЭ",
+  "client_en": "HSE Art and Design School",
+  "tags": [
+   "ads",
+   "head"
+  ],
+  "w": 1280,
+  "h": 720,
+  "poster": "media/hse-potapov.jpg?v=7826d2bb",
+  "loop": "media/hse-potapov_loop.mp4?v=8992200f"
+ },
+ {
   "id": "suite",
   "title": "Костюм на крыле",
   "client": "",
@@ -204,6 +266,22 @@ window.WORKS = [
   "video": "media/suite.mp4?v=6b21ab5e"
  },
  {
+  "id": "hse-interior",
+  "url": "https://www.youtube.com/watch?v=qgaYcf4wYBs",
+  "title": "Дизайн среды и интерьера",
+  "title_en": "Environmental and interior design",
+  "client": "Школа дизайна НИУ ВШЭ",
+  "client_en": "HSE Art and Design School",
+  "tags": [
+   "ads",
+   "head"
+  ],
+  "w": 1280,
+  "h": 720,
+  "poster": "media/hse-interior.jpg?v=a37ace92",
+  "loop": "media/hse-interior_loop.mp4?v=16d4c829"
+ },
+ {
   "w": 1920,
   "h": 1080,
   "id": "gesaffelstein",
@@ -215,6 +293,21 @@ window.WORKS = [
    "event"
   ],
   "poster": "media/vimeo_232950940.jpg"
+ },
+ {
+  "id": "hse-kashirin",
+  "url": "https://www.youtube.com/watch?v=jLgZxGEvSu0",
+  "title": "Евгений Каширин и Леонид Славин",
+  "title_en": "Evgeny Kashirin and Leonid Slavin",
+  "client": "Школа дизайна НИУ ВШЭ",
+  "client_en": "HSE Art and Design School",
+  "tags": [
+   "head"
+  ],
+  "w": 1280,
+  "h": 720,
+  "poster": "media/hse-kashirin.jpg?v=fbeed56f",
+  "loop": "media/hse-kashirin_loop.mp4?v=241d5564"
  },
  {
   "w": 1,
