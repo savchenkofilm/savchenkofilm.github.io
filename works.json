@@ -1,14 +1,13 @@
 [
-  {"id": "therapy", "src": "../my_works/therapy.mov", "title": "Терапия", "client": "AI-короткометражка", "tags": ["art", "ai"], "title_en": "Therapy", "client_en": "AI short film"},
-  {"id": "alumni-ushakova", "src": "_vimeo_src/865538958.mp4", "url": "https://vimeo.com/865538958", "title": "Alumni Talk #3. Полина Ушакова", "client": "", "tags": ["head"], "title_en": "Alumni Talk #3. Polina Ushakova"},
-  {"id": "florensky", "src": "../my_works/reels_Odra_Florensky.mov", "title": "Иван Флоренский", "title_en": "Ivan Florensky", "client": "Odra", "tags": ["art", "head"]},
+  {"id": "florensky", "src": "../my_works/reels_Odra_Florensky.mov", "title": "Иван Флоренский", "title_en": "Ivan Florensky", "client": "Odra", "tags": ["art", "head"], "poster_file": "../my_works/Still 2026-11-03 150437_4.17.1.png", "loop_at": 0},
+  {"id": "therapy", "src": "../my_works/therapy.mov", "title": "Терапия", "client": "AI-короткометражка", "tags": ["art", "ai"], "title_en": "Therapy", "client_en": "AI short film", "poster_at": 8.3, "loop_at": 8.0, "loop_len": 5},
   {"id": "the-mato", "url": "https://vimeo.com/732263148", "title": "The Mato", "client": "", "tags": ["ads"], "poster": "media/vimeo_732263148.jpg", "w": 3840, "h": 2160},
+  {"id": "alumni-ushakova", "url": "https://vimeo.com/865538958", "title": "Alumni Talk #3. Полина Ушакова", "client": "", "tags": ["head"], "title_en": "Alumni Talk #3. Polina Ushakova", "src": "_vimeo_src/865538958.mp4", "poster_file": "media/vimeo_865538958.jpg"},
+  {"id": "404zero", "src": "_vimeo_src/595230494.mp4", "url": "https://vimeo.com/595230494", "title": "404.zero", "client": "", "tags": ["art", "head"]},
   {"id": "niva-roadster", "src": "../my_works/niva_roadster.mov", "title": "Нива. Трамплин", "client": "", "tags": ["art", "ai"], "title_en": "Niva. The ramp"},
   {"id": "megafon-shcherbakov", "url": "https://vimeo.com/709500040", "title": "Щербаков × МегаФон", "client": "МегаФон", "tags": ["ads", "head", "art"], "poster": "media/vimeo_709500040.jpg", "w": 1920, "h": 1536, "title_en": "Shcherbakov × MegaFon", "client_en": "MegaFon"},
   {"id": "secret-bar", "url": "https://vimeo.com/323714806", "title": "Secret bar", "client": "", "tags": ["ads", "event"], "poster": "media/vimeo_323714806.jpg", "w": 1920, "h": 1012},
-  {"id": "emu", "src": "../my_works/short_1_vox_v2_sfx.mp4", "title": "Война с эму", "client": "События XX века", "tags": ["anim", "ai"], "title_en": "The Emu War", "client_en": "Events of the 20th century"},
   {"id": "neklessa", "src": "../my_works/Odra_liza_neklessa.mov", "title": "Лиза Неклесса", "title_en": "Liza Neklessa", "client": "Odra", "tags": ["art"]},
-  {"id": "404zero", "src": "_vimeo_src/595230494.mp4", "url": "https://vimeo.com/595230494", "title": "404.zero", "client": "", "tags": ["art", "head"]},
   {"id": "niva-vibe", "src": "../my_works/niva_vibe.mov", "title": "Нива. Город", "client": "", "tags": ["art", "ai"], "title_en": "Niva. The city"},
   {"id": "s7-jazz", "url": "https://vimeo.com/429153343", "title": "Усадьба Jazz", "client": "S7 Airlines", "tags": ["ads", "event"], "poster": "media/vimeo_429153343.jpg", "w": 4096, "h": 2160, "title_en": "Usadba Jazz", "client_en": "S7 Airlines"},
   {"id": "tinto", "src": "_vimeo_src/334638712.mp4", "url": "https://vimeo.com/334638712", "title": "Tinto", "client": "", "tags": ["ads"]},
@@ -16,5 +15,6 @@
   {"id": "gesaffelstein", "url": "https://vimeo.com/232950940", "title": "Gesaffelstein in Space Moscow", "client": "", "tags": ["art", "event"], "poster": "media/vimeo_232950940.jpg", "w": 1920, "h": 1080},
   {"id": "megafon-skate", "url": "https://vimeo.com/359290004", "title": "Скейт. Максим Круглов", "client": "МегаФон", "tags": ["ads", "head"], "poster": "media/vimeo_359290004.jpg", "w": 1, "h": 1, "title_en": "Skate. Maxim Kruglov", "client_en": "MegaFon"},
   {"id": "megafon-football", "url": "https://vimeo.com/359289821", "title": "Уличный футбол. Жан-Пьер Папен", "client": "МегаФон", "tags": ["ads", "head"], "poster": "media/vimeo_359289821.jpg", "w": 1, "h": 1, "title_en": "Street football. Jean-Pierre Papin", "client_en": "MegaFon"},
-  {"id": "megafon-bmx", "url": "https://vimeo.com/359289722", "title": "BMX. Макс Чуприна", "client": "МегаФон", "tags": ["ads", "head"], "poster": "media/vimeo_359289722.jpg", "w": 1, "h": 1, "title_en": "BMX. Max Chuprina", "client_en": "MegaFon"}
+  {"id": "megafon-bmx", "url": "https://vimeo.com/359289722", "title": "BMX. Макс Чуприна", "client": "МегаФон", "tags": ["ads", "head"], "poster": "media/vimeo_359289722.jpg", "w": 1, "h": 1, "title_en": "BMX. Max Chuprina", "client_en": "MegaFon"},
+  {"id": "emu", "src": "../my_works/short_1_vox_v2_sfx.mp4", "title": "Война с эму", "client": "События XX века", "tags": ["anim", "ai"], "title_en": "The Emu War", "client_en": "Events of the 20th century"}
 ]

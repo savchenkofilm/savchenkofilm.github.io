@@ -47,7 +47,11 @@ def build(work):
     src = (ROOT / work["src"]).resolve()
     w, h, dur = probe(src)
     full, poster, loop = MEDIA / f"{wid}.mp4", MEDIA / f"{wid}.jpg", MEDIA / f"{wid}_loop.mp4"
-    start = max(0.0, min(dur * 0.3, dur - LOOP_SEC))
+    # Ручные настройки в works.json: poster_file, poster_at, loop_at, loop_len (секунды).
+    loop_len = work.get("loop_len", LOOP_SEC)
+    start = max(0.0, min(dur * 0.3, dur - loop_len))
+    loop_at = work.get("loop_at", start)
+    poster_at = work.get("poster_at", start)
 
     # Работа с внешней ссылкой (Vimeo и т.п.) играет там, свой mp4 не нужен.
     if "url" not in work and (FORCE or not full.exists()):
@@ -57,16 +61,22 @@ def build(work):
                "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", str(full))
     if FORCE or not poster.exists():
         print(f"  {wid}: обложка")
-        ffmpeg("-ss", f"{start:.2f}", "-i", str(src), "-frames:v", "1",
-               "-vf", even_scale(w, h, 1280), "-q:v", "4", str(poster))
+        if "poster_file" in work:
+            ffmpeg("-i", str((ROOT / work["poster_file"]).resolve()), "-frames:v", "1",
+                   "-vf", f"scale={w}:{h}:force_original_aspect_ratio=increase,crop={w}:{h},"
+                   + even_scale(w, h, 1280), "-q:v", "4", str(poster))
+        else:
+            ffmpeg("-ss", f"{poster_at:.2f}", "-i", str(src), "-frames:v", "1",
+                   "-vf", even_scale(w, h, 1280), "-q:v", "4", str(poster))
     if FORCE or not loop.exists():
         print(f"  {wid}: луп")
-        ffmpeg("-ss", f"{start:.2f}", "-t", str(LOOP_SEC), "-i", str(src), "-an",
+        ffmpeg("-ss", f"{loop_at:.2f}", "-t", str(loop_len), "-i", str(src), "-an",
                "-vf", even_scale(w, h, 960) + ",format=yuv420p",
                "-c:v", "libx264", "-preset", "slow", "-crf", "28",
                "-movflags", "+faststart", str(loop))
 
-    out = {**{k: v for k, v in work.items() if k != "src"},
+    build_only = ("src", "poster_file", "poster_at", "loop_at", "loop_len")
+    out = {**{k: v for k, v in work.items() if k not in build_only},
            "w": w, "h": h, "poster": f"media/{wid}.jpg", "loop": f"media/{wid}_loop.mp4"}
     if "url" not in work:
         out["video"] = f"media/{wid}.mp4"

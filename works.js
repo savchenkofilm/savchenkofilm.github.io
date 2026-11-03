@@ -1,5 +1,20 @@
 window.WORKS = [
  {
+  "id": "florensky",
+  "title": "Иван Флоренский",
+  "title_en": "Ivan Florensky",
+  "client": "Odra",
+  "tags": [
+   "art",
+   "head"
+  ],
+  "w": 2160,
+  "h": 3840,
+  "poster": "media/florensky.jpg",
+  "loop": "media/florensky_loop.mp4",
+  "video": "media/florensky.mp4"
+ },
+ {
   "id": "therapy",
   "title": "Терапия",
   "client": "AI-короткометражка",
@@ -16,6 +31,18 @@ window.WORKS = [
   "video": "media/therapy.mp4"
  },
  {
+  "w": 3840,
+  "h": 2160,
+  "id": "the-mato",
+  "url": "https://vimeo.com/732263148",
+  "title": "The Mato",
+  "client": "",
+  "tags": [
+   "ads"
+  ],
+  "poster": "media/vimeo_732263148.jpg"
+ },
+ {
   "id": "alumni-ushakova",
   "url": "https://vimeo.com/865538958",
   "title": "Alumni Talk #3. Полина Ушакова",
@@ -30,31 +57,18 @@ window.WORKS = [
   "loop": "media/alumni-ushakova_loop.mp4"
  },
  {
-  "id": "florensky",
-  "title": "Иван Флоренский",
-  "title_en": "Ivan Florensky",
-  "client": "Odra",
+  "id": "404zero",
+  "url": "https://vimeo.com/595230494",
+  "title": "404.zero",
+  "client": "",
   "tags": [
    "art",
    "head"
   ],
-  "w": 2160,
-  "h": 3840,
-  "poster": "media/florensky.jpg",
-  "loop": "media/florensky_loop.mp4",
-  "video": "media/florensky.mp4"
- },
- {
-  "w": 3840,
-  "h": 2160,
-  "id": "the-mato",
-  "url": "https://vimeo.com/732263148",
-  "title": "The Mato",
-  "client": "",
-  "tags": [
-   "ads"
-  ],
-  "poster": "media/vimeo_732263148.jpg"
+  "w": 360,
+  "h": 450,
+  "poster": "media/404zero.jpg",
+  "loop": "media/404zero_loop.mp4"
  },
  {
   "id": "niva-roadster",
@@ -101,22 +115,6 @@ window.WORKS = [
   "poster": "media/vimeo_323714806.jpg"
  },
  {
-  "id": "emu",
-  "title": "Война с эму",
-  "client": "События XX века",
-  "tags": [
-   "anim",
-   "ai"
-  ],
-  "title_en": "The Emu War",
-  "client_en": "Events of the 20th century",
-  "w": 1080,
-  "h": 1920,
-  "poster": "media/emu.jpg",
-  "loop": "media/emu_loop.mp4",
-  "video": "media/emu.mp4"
- },
- {
   "id": "neklessa",
   "title": "Лиза Неклесса",
   "title_en": "Liza Neklessa",
@@ -129,20 +127,6 @@ window.WORKS = [
   "poster": "media/neklessa.jpg",
   "loop": "media/neklessa_loop.mp4",
   "video": "media/neklessa.mp4"
- },
- {
-  "id": "404zero",
-  "url": "https://vimeo.com/595230494",
-  "title": "404.zero",
-  "client": "",
-  "tags": [
-   "art",
-   "head"
-  ],
-  "w": 360,
-  "h": 450,
-  "poster": "media/404zero.jpg",
-  "loop": "media/404zero_loop.mp4"
  },
  {
   "id": "niva-vibe",
@@ -259,5 +243,21 @@ window.WORKS = [
   "poster": "media/vimeo_359289722.jpg",
   "title_en": "BMX. Max Chuprina",
   "client_en": "MegaFon"
+ },
+ {
+  "id": "emu",
+  "title": "Война с эму",
+  "client": "События XX века",
+  "tags": [
+   "anim",
+   "ai"
+  ],
+  "title_en": "The Emu War",
+  "client_en": "Events of the 20th century",
+  "w": 1080,
+  "h": 1920,
+  "poster": "media/emu.jpg",
+  "loop": "media/emu_loop.mp4",
+  "video": "media/emu.mp4"
  }
 ];
