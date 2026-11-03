@@ -80,6 +80,7 @@
 
   function setFilter(key) {
     current = current === key ? "all" : key;
+    window.gtag?.("event", "filter", { tag: current });
     history.replaceState(null, "", current === "all" ? location.pathname + location.search : "#" + current);
     tagsEl.querySelectorAll(".tag").forEach((b) => b.setAttribute("aria-pressed", b.dataset.tag === current));
     layout();
@@ -307,6 +308,7 @@
   }
 
   function openViewer(w) {
+    window.gtag?.("event", "open_video", { video: w.id });
     const src = embedFor(w);
     stage.style.setProperty("--r", w.w / w.h);
     if (src) {
