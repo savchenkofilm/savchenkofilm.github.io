@@ -280,7 +280,7 @@ window.WORKS = [
   "w": 1280,
   "h": 720,
   "poster": "media/hse-interior.jpg?v=aa4fc36c",
-  "loop": "media/hse-interior_loop.mp4?v=aade5e31"
+  "loop": "media/hse-interior_loop.mp4?v=15d44914"
  },
  {
   "w": 1920,
