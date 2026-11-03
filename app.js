@@ -97,6 +97,74 @@
     { threshold: 0.6 }
   );
 
+  // ---------- лайки ----------
+  // Общий счётчик на abacus.jasoncameron.dev, без ограничений: каждый клик = +1.
+  const LIKES = "https://abacus.jasoncameron.dev";
+  const HEART = `<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.4C.9 8.1 3 4.5 6.6 4.5c2.1 0 3.6 1.2 5.4 3.2 1.8-2 3.3-3.2 5.4-3.2 3.6 0 5.7 3.6 4.2 7.1C19.5 16.4 12 21 12 21z"/></svg>`;
+  const fx = document.createElement("div");
+  fx.className = "like-fx";
+  document.body.append(fx);
+  let sending = Promise.resolve();
+
+  function likeButton(w) {
+    const b = document.createElement("span");
+    b.className = "like";
+    b.setAttribute("role", "button");
+    b.tabIndex = 0;
+    b.setAttribute("aria-label", "Like");
+    b.innerHTML = HEART + `<i></i>`;
+    const num = b.querySelector("i");
+    let count = 0, shots = 0;
+    const show = () => (num.textContent = count || "");
+    fetch(`${LIKES}/get/savchenkofilm/like-${w.id}`)
+      .then((r) => r.json())
+      .then((d) => { if (d.value > count) { count = d.value; show(); } })
+      .catch(() => {});
+    const like = (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      count++;
+      show();
+      b.classList.remove("pop");
+      void b.offsetWidth;
+      b.classList.add("pop");
+      fly(b, shots++);
+      // Клики идут по очереди, чтобы частое нажатие не упёрлось в лимит запросов.
+      sending = sending.then(() =>
+        fetch(`${LIKES}/hit/savchenkofilm/like-${w.id}`).catch(() => {}).then(() => new Promise((r) => setTimeout(r, 120)))
+      );
+    };
+    b.addEventListener("click", like);
+    b.addEventListener("keydown", (e) => (e.key === "Enter" || e.key === " ") && like(e));
+    return b;
+  }
+
+  // Сердечко летит по кубической кривой Безье: первое вверх, второе вправо, третье влево, дальше как попало.
+  function fly(from, n) {
+    const r = from.getBoundingClientRect();
+    const x0 = r.left + 13, y0 = r.top + r.height / 2;
+    const rnd = (a, b) => a + Math.random() * (b - a);
+    const dir = n < 3 ? [0, 1, -1][n] : rnd(-1.2, 1.2);
+    const x3 = x0 + dir * rnd(70, 120), y3 = y0 - rnd(110, 170) + Math.abs(dir) * 40;
+    const x1 = x0 - dir * rnd(10, 40), y1 = y0 - rnd(40, 70);
+    const x2 = x3 + dir * rnd(-10, 30) - rnd(-30, 30), y2 = y3 + rnd(30, 60);
+    const h = document.createElement("span");
+    h.innerHTML = HEART;
+    h.style.color = `hsl(${rnd(340, 375) % 360} 90% 62%)`;
+    fx.append(h);
+    const dur = rnd(850, 1100), t0 = performance.now(), spin = rnd(-40, 40);
+    const step = (now) => {
+      const t = Math.min(1, (now - t0) / dur), u = 1 - t;
+      const x = u * u * u * x0 + 3 * u * u * t * x1 + 3 * u * t * t * x2 + t * t * t * x3;
+      const y = u * u * u * y0 + 3 * u * u * t * y1 + 3 * u * t * t * y2 + t * t * t * y3;
+      const s = t < 0.15 ? 0.4 + t / 0.15 * 0.9 : 1.3 - t * 0.4;
+      h.style.transform = `translate(${x - 11}px, ${y - 11}px) rotate(${spin * t}deg) scale(${s})`;
+      h.style.opacity = t < 0.6 ? 1 : (1 - t) / 0.4;
+      t < 1 ? requestAnimationFrame(step) : h.remove();
+    };
+    requestAnimationFrame(step);
+  }
+
   // ---------- карточки ----------
   cards = works.map((w, i) => {
     const el = document.createElement("button");
@@ -105,6 +173,7 @@
     el.innerHTML =
       (w.poster ? `<img src="${w.poster}" alt="" loading="lazy" decoding="async">` : "") + `<div class="cap"></div>`;
     el.onclick = () => openViewer(w);
+    el.append(likeButton(w));
     if (w.loop || (canHover && vimeoId(w))) {
       if (canHover) {
         el.addEventListener("mouseenter", () => playLoop(el, w));
