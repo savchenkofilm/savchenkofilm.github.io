@@ -4,7 +4,7 @@
   {"id": "the-mato", "url": "https://vimeo.com/732263148", "title": "The Mato", "client": "", "tags": ["ads"], "poster": "media/vimeo_732263148.jpg", "w": 3840, "h": 2160},
   {"id": "alumni-ushakova", "url": "https://vimeo.com/865538958", "title": "Alumni Talk #3. Полина Ушакова", "client": "", "tags": ["head"], "title_en": "Alumni Talk #3. Polina Ushakova", "src": "_vimeo_src/865538958.mp4", "poster_file": "media/vimeo_865538958.jpg"},
   {"id": "niva-vibe", "src": "../my_works/niva_vibe.mov", "title": "Нива. Город", "client": "", "tags": ["art", "ai"], "title_en": "Niva. The city"},
-  {"id": "404zero", "src": "_vimeo_src/595230494.mp4", "url": "https://vimeo.com/595230494", "title": "404.zero", "client": "", "tags": ["art", "head"], "loop_at": 49.5, "loop_len": 4.8},
+  {"id": "404zero", "src": "_vimeo_src/595230494.mp4", "url": "https://vimeo.com/595230494", "title": "404.zero", "client": "", "tags": ["art", "head"], "loop_at": 49.5, "loop_len": 4.8, "poster_file": "../my_works/Still 2026-09-28 181242_1.124.1.png"},
   {"id": "neklessa", "src": "../my_works/Odra_liza_neklessa.mov", "title": "Лиза Неклесса", "title_en": "Liza Neklessa", "client": "Odra", "tags": ["art"]},
   {"id": "mercedes", "src": "../my_works/merc _v.mov", "title": "Mercedes", "title_en": "Mercedes", "client": "", "tags": ["ads", "ai"], "poster_file": "../my_works/Still 2026-11-03 193322_3.1.1.png", "loop_at": 0, "zone": "middle"},
   {"id": "niva-roadster", "src": "../my_works/niva_roadster.mov", "title": "Нива. Трамплин", "client": "", "tags": ["art", "ai"], "title_en": "Niva. The ramp"},

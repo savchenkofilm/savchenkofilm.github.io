@@ -83,7 +83,7 @@ window.WORKS = [
   ],
   "w": 360,
   "h": 450,
-  "poster": "media/404zero.jpg?v=921300ef",
+  "poster": "media/404zero.jpg?v=f9405b17",
   "loop": "media/404zero_loop.mp4?v=ad9c7f1f"
  },
  {
