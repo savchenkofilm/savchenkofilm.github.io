@@ -3,7 +3,9 @@
 
 Запуск: python3 tools/build_media.py [--force]
 """
+import hashlib
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -87,6 +89,17 @@ def main():
     (ROOT / "works.js").write_text(
         "window.WORKS = " + json.dumps(out, ensure_ascii=False, indent=1) + ";\n")
     print(f"works.js: {len(out)} работ")
+    bust_cache()
+
+
+def bust_cache():
+    """Ставит ?v=<хэш> на works.js, app.js, style.css в index.html, чтобы браузер не держал старые."""
+    index = ROOT / "index.html"
+    html = index.read_text()
+    for name in ("works.js", "app.js", "style.css"):
+        digest = hashlib.md5((ROOT / name).read_bytes()).hexdigest()[:8]
+        html = re.sub(rf'{re.escape(name)}(\?v=\w+)?"', f'{name}?v={digest}"', html)
+    index.write_text(html)
 
 
 if __name__ == "__main__":
