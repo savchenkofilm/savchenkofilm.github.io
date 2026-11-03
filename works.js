@@ -375,8 +375,7 @@ window.WORKS = [
   "title": "Война с эму",
   "client": "События XX века",
   "tags": [
-   "anim",
-   "ai"
+   "anim"
   ],
   "title_en": "The Emu War",
   "client_en": "Events of the 20th century",
