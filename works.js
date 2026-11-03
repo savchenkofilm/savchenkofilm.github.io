@@ -16,6 +16,23 @@ window.WORKS = [
   "video": "media/florensky.mp4?v=0ecdba4e"
  },
  {
+  "w": 1920,
+  "h": 1536,
+  "id": "megafon-shcherbakov",
+  "url": "https://vimeo.com/709500040",
+  "title": "Щербаков × МегаФон",
+  "client": "МегаФон",
+  "tags": [
+   "ads",
+   "head",
+   "art"
+  ],
+  "poster": "media/vimeo_709500040.jpg",
+  "title_en": "Shcherbakov × MegaFon",
+  "client_en": "MegaFon",
+  "big": true
+ },
+ {
   "id": "therapy",
   "title": "Терапия",
   "client": "AI-короткометражка",
@@ -32,18 +49,6 @@ window.WORKS = [
   "video": "media/therapy.mp4?v=a9a3c3c9"
  },
  {
-  "w": 3840,
-  "h": 2160,
-  "id": "the-mato",
-  "url": "https://vimeo.com/732263148",
-  "title": "The Mato",
-  "client": "",
-  "tags": [
-   "ads"
-  ],
-  "poster": "media/vimeo_732263148.jpg"
- },
- {
   "id": "alumni-ushakova",
   "url": "https://vimeo.com/865538958",
   "title": "Alumni Talk #3. Полина Ушакова",
@@ -56,6 +61,18 @@ window.WORKS = [
   "h": 720,
   "poster": "media/alumni-ushakova.jpg?v=b08c1112",
   "loop": "media/alumni-ushakova_loop.mp4?v=e0c067aa"
+ },
+ {
+  "w": 3840,
+  "h": 2160,
+  "id": "the-mato",
+  "url": "https://vimeo.com/732263148",
+  "title": "The Mato",
+  "client": "",
+  "tags": [
+   "ads"
+  ],
+  "poster": "media/vimeo_732263148.jpg"
  },
  {
   "id": "niva-vibe",
@@ -96,9 +113,39 @@ window.WORKS = [
   ],
   "w": 1080,
   "h": 1920,
-  "poster": "media/neklessa.jpg?v=3c727bfb",
+  "poster": "media/neklessa.jpg?v=14e22ef3",
   "loop": "media/neklessa_loop.mp4?v=519d0ed1",
   "video": "media/neklessa.mp4?v=de820352"
+ },
+ {
+  "id": "hse-parygina",
+  "url": "https://www.youtube.com/watch?v=wR4HWbZ9JCM",
+  "title": "Alumni Talk #5. Полина Парыгина",
+  "title_en": "Alumni Talk #5. Polina Parygina",
+  "client": "Школа дизайна НИУ ВШЭ",
+  "client_en": "HSE Art and Design School",
+  "tags": [
+   "podcast"
+  ],
+  "w": 960,
+  "h": 720,
+  "poster": "media/hse-parygina.jpg?v=44644cda",
+  "loop": "media/hse-parygina_loop.mp4?v=ef642a34"
+ },
+ {
+  "id": "niva-roadster",
+  "title": "Нива. Трамплин",
+  "client": "",
+  "tags": [
+   "art",
+   "ai"
+  ],
+  "title_en": "Niva. The ramp",
+  "w": 2160,
+  "h": 3840,
+  "poster": "media/niva-roadster.jpg?v=d28a9a56",
+  "loop": "media/niva-roadster_loop.mp4?v=5a6e31d8",
+  "video": "media/niva-roadster.mp4?v=fc745668"
  },
  {
   "id": "mercedes",
@@ -117,52 +164,6 @@ window.WORKS = [
   "video": "media/mercedes.mp4?v=5f43f843"
  },
  {
-  "id": "hse-parygina",
-  "url": "https://www.youtube.com/watch?v=wR4HWbZ9JCM",
-  "title": "Alumni Talk #5. Полина Парыгина",
-  "title_en": "Alumni Talk #5. Polina Parygina",
-  "client": "Школа дизайна НИУ ВШЭ",
-  "client_en": "HSE Art and Design School",
-  "tags": [
-   "podcast"
-  ],
-  "w": 960,
-  "h": 720,
-  "poster": "media/hse-parygina.jpg?v=967fd71d",
-  "loop": "media/hse-parygina_loop.mp4?v=c22e4fdf"
- },
- {
-  "id": "niva-roadster",
-  "title": "Нива. Трамплин",
-  "client": "",
-  "tags": [
-   "art",
-   "ai"
-  ],
-  "title_en": "Niva. The ramp",
-  "w": 2160,
-  "h": 3840,
-  "poster": "media/niva-roadster.jpg?v=d28a9a56",
-  "loop": "media/niva-roadster_loop.mp4?v=5a6e31d8",
-  "video": "media/niva-roadster.mp4?v=fc745668"
- },
- {
-  "w": 1920,
-  "h": 1536,
-  "id": "megafon-shcherbakov",
-  "url": "https://vimeo.com/709500040",
-  "title": "Щербаков × МегаФон",
-  "client": "МегаФон",
-  "tags": [
-   "ads",
-   "head",
-   "art"
-  ],
-  "poster": "media/vimeo_709500040.jpg",
-  "title_en": "Shcherbakov × MegaFon",
-  "client_en": "MegaFon"
- },
- {
   "id": "hse-event-design",
   "url": "https://www.youtube.com/watch?v=dm-oU4t3Mm8",
   "title": "Что такое ивент-дизайн",
@@ -175,8 +176,8 @@ window.WORKS = [
   ],
   "w": 1280,
   "h": 720,
-  "poster": "media/hse-event-design.jpg?v=977ff863",
-  "loop": "media/hse-event-design_loop.mp4?v=d33bba98"
+  "poster": "media/hse-event-design.jpg?v=ef67bd04",
+  "loop": "media/hse-event-design_loop.mp4?v=b6a1b9cf"
  },
  {
   "w": 1920,
@@ -203,8 +204,8 @@ window.WORKS = [
   ],
   "w": 1280,
   "h": 720,
-  "poster": "media/hse-graduation.jpg?v=887b6c3a",
-  "loop": "media/hse-graduation_loop.mp4?v=aafbb0c7"
+  "poster": "media/hse-graduation.jpg?v=0b3543cb",
+  "loop": "media/hse-graduation_loop.mp4?v=e809e09c"
  },
  {
   "w": 4096,
@@ -247,8 +248,8 @@ window.WORKS = [
   ],
   "w": 1280,
   "h": 720,
-  "poster": "media/hse-potapov.jpg?v=7826d2bb",
-  "loop": "media/hse-potapov_loop.mp4?v=8992200f"
+  "poster": "media/hse-potapov.jpg?v=96ea1c6b",
+  "loop": "media/hse-potapov_loop.mp4?v=1c37a6a1"
  },
  {
   "id": "suite",
@@ -278,8 +279,8 @@ window.WORKS = [
   ],
   "w": 1280,
   "h": 720,
-  "poster": "media/hse-interior.jpg?v=a37ace92",
-  "loop": "media/hse-interior_loop.mp4?v=16d4c829"
+  "poster": "media/hse-interior.jpg?v=aa4fc36c",
+  "loop": "media/hse-interior_loop.mp4?v=aade5e31"
  },
  {
   "w": 1920,
