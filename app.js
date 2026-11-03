@@ -150,7 +150,6 @@
     const x2 = x3 + dir * rnd(-10, 30) - rnd(-30, 30), y2 = y3 + rnd(30, 60);
     const h = document.createElement("span");
     h.innerHTML = HEART;
-    h.style.color = `hsl(${rnd(340, 375) % 360} 90% 62%)`;
     fx.append(h);
     const dur = rnd(850, 1100), t0 = performance.now(), spin = rnd(-40, 40);
     const step = (now) => {
