@@ -73,21 +73,6 @@ window.WORKS = [
   "video": "media/niva-vibe.mp4"
  },
  {
-  "id": "mercedes",
-  "title": "Mercedes",
-  "title_en": "Mercedes",
-  "client": "",
-  "tags": [
-   "ads",
-   "ai"
-  ],
-  "w": 2160,
-  "h": 3840,
-  "poster": "media/mercedes.jpg",
-  "loop": "media/mercedes_loop.mp4",
-  "video": "media/mercedes.mp4"
- },
- {
   "id": "404zero",
   "url": "https://vimeo.com/595230494",
   "title": "404.zero",
@@ -114,6 +99,22 @@ window.WORKS = [
   "poster": "media/neklessa.jpg",
   "loop": "media/neklessa_loop.mp4",
   "video": "media/neklessa.mp4"
+ },
+ {
+  "id": "mercedes",
+  "title": "Mercedes",
+  "title_en": "Mercedes",
+  "client": "",
+  "tags": [
+   "ads",
+   "ai"
+  ],
+  "zone": "middle",
+  "w": 2160,
+  "h": 3840,
+  "poster": "media/mercedes.jpg",
+  "loop": "media/mercedes_loop.mp4",
+  "video": "media/mercedes.mp4"
  },
  {
   "id": "niva-roadster",

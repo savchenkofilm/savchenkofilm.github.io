@@ -186,6 +186,8 @@
   // Правая зона бронируется, только если AI-работа идёт в ближайших карточках, иначе низ пустеет.
   function inZone(w, s, span, cols, aiSoon) {
     if (current !== "all" || cols < 8) return true;
+    // "zone": "middle" в works.json — полу-AI работы держатся по центру.
+    if (w.zone === "middle") return s >= Math.floor(cols * 0.25) && s + span <= Math.ceil(cols * 0.7);
     if (w.tags.includes("ai")) return s >= Math.max(cols / 2, cols - span - 2) || s === cols - span;
     return !aiSoon || s + span <= Math.max(span, Math.ceil(cols * 0.65));
   }
