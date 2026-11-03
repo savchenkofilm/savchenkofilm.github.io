@@ -232,7 +232,7 @@ window.WORKS = [
   ],
   "w": 1280,
   "h": 720,
-  "poster": "media/tinto.jpg?v=ad9eb06f",
+  "poster": "media/tinto.jpg?v=dbdb2055",
   "loop": "media/tinto_loop.mp4?v=e98aef7f"
  },
  {

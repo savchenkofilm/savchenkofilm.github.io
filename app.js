@@ -234,9 +234,9 @@
       const width = span * unit - gutter;
       const height = width * (c.w.h / c.w.w);
       const near = tops.filter((t) => t[1] <= min + unit * 0.3);
-      // Первый ряд набирается от краёв (арт слева, AI справа), чтобы стартовый экран был плотным.
+      // Первый ряд и крупные карточки встают к краю (арт слева, AI справа): так над ними не остаётся дыр.
       const [s, top] =
-        min === 0
+        min === 0 || c.w.big
           ? near[isAi(c) ? near.length - 1 : 0]
           : pick(r, near);
 
