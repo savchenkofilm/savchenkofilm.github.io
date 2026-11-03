@@ -170,3 +170,32 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   .card, .field { transition: opacity .2s; }
 }
+
+.consent {
+  position: fixed;
+  left: 16px; right: 16px; bottom: 16px;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 520px;
+  margin-left: auto;
+  padding: 12px 14px;
+  background: #1a1a19;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  font-size: 13px;
+}
+.consent[hidden] { display: none; }
+.consent p { margin: 0; flex: 1 1 240px; color: var(--muted); }
+.consent button {
+  font: inherit;
+  color: var(--fg);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 14px;
+  cursor: pointer;
+}
+.consent button[data-ok="yes"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }

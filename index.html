@@ -9,13 +9,16 @@
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
+let consent = null;
+try { consent = localStorage.getItem("ga-consent"); } catch (e) {}
+gtag("consent", "default", { analytics_storage: consent === "yes" ? "granted" : "denied", ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied" });
 gtag("js", new Date());
 gtag("config", "G-TCJJ8T1KNY");
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=ee2947ec">
+<link rel="stylesheet" href="style.css?v=0a39e216">
 </head>
 <body>
 <header class="top">
@@ -45,5 +48,31 @@ gtag("config", "G-TCJJ8T1KNY");
 
 <script src="works.js?v=da6e2d55"></script>
 <script src="app.js?v=1c6c439d"></script>
+<div class="consent" id="consent" hidden>
+  <p id="consent-text"></p>
+  <button type="button" data-ok="yes" id="consent-yes"></button><button type="button" data-ok="no" id="consent-no"></button>
+</div>
+<script>
+(() => {
+  let saved = null;
+  try { saved = localStorage.getItem("ga-consent"); } catch (e) {}
+  if (saved) return;
+  const ru = document.documentElement.lang === "ru";
+  const box = document.getElementById("consent");
+  document.getElementById("consent-text").textContent = ru
+    ? "Сайт использует Google Analytics, чтобы понимать, сколько людей его смотрит."
+    : "This site uses Google Analytics to see how many people visit.";
+  document.getElementById("consent-yes").textContent = ru ? "Ок" : "OK";
+  document.getElementById("consent-no").textContent = ru ? "Нет" : "No";
+  box.hidden = false;
+  box.addEventListener("click", (e) => {
+    const ok = e.target.dataset.ok;
+    if (!ok) return;
+    try { localStorage.setItem("ga-consent", ok); } catch (e) {}
+    if (ok === "yes") gtag("consent", "update", { analytics_storage: "granted" });
+    box.hidden = true;
+  });
+})();
+</script>
 </body>
 </html>
