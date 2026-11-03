@@ -117,6 +117,20 @@ window.WORKS = [
   "video": "media/emu.mp4"
  },
  {
+  "id": "neklessa",
+  "title": "Лиза Неклесса",
+  "title_en": "Liza Neklessa",
+  "client": "Odra",
+  "tags": [
+   "art"
+  ],
+  "w": 1080,
+  "h": 1920,
+  "poster": "media/neklessa.jpg",
+  "loop": "media/neklessa_loop.mp4",
+  "video": "media/neklessa.mp4"
+ },
+ {
   "id": "404zero",
   "url": "https://vimeo.com/595230494",
   "title": "404.zero",

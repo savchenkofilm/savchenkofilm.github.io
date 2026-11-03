@@ -7,6 +7,7 @@
   {"id": "megafon-shcherbakov", "url": "https://vimeo.com/709500040", "title": "Щербаков × МегаФон", "client": "МегаФон", "tags": ["ads", "head", "art"], "poster": "media/vimeo_709500040.jpg", "w": 1920, "h": 1536, "title_en": "Shcherbakov × MegaFon", "client_en": "MegaFon"},
   {"id": "secret-bar", "url": "https://vimeo.com/323714806", "title": "Secret bar", "client": "", "tags": ["ads", "event"], "poster": "media/vimeo_323714806.jpg", "w": 1920, "h": 1012},
   {"id": "emu", "src": "../my_works/short_1_vox_v2_sfx.mp4", "title": "Война с эму", "client": "События XX века", "tags": ["anim", "ai"], "title_en": "The Emu War", "client_en": "Events of the 20th century"},
+  {"id": "neklessa", "src": "../my_works/Odra_liza_neklessa.mov", "title": "Лиза Неклесса", "title_en": "Liza Neklessa", "client": "Odra", "tags": ["art"]},
   {"id": "404zero", "src": "_vimeo_src/595230494.mp4", "url": "https://vimeo.com/595230494", "title": "404.zero", "client": "", "tags": ["art", "head"]},
   {"id": "niva-vibe", "src": "../my_works/niva_vibe.mov", "title": "Нива. Город", "client": "", "tags": ["art", "ai"], "title_en": "Niva. The city"},
   {"id": "s7-jazz", "url": "https://vimeo.com/429153343", "title": "Усадьба Jazz", "client": "S7 Airlines", "tags": ["ads", "event"], "poster": "media/vimeo_429153343.jpg", "w": 4096, "h": 2160, "title_en": "Usadba Jazz", "client_en": "S7 Airlines"},
