@@ -30,7 +30,8 @@ window.WORKS = [
   "poster": "media/vimeo_709500040.jpg",
   "title_en": "Shcherbakov × MegaFon",
   "client_en": "MegaFon",
-  "big": true
+  "big": true,
+  "pin": "left"
  },
  {
   "id": "therapy",
@@ -164,10 +165,10 @@ window.WORKS = [
   "video": "media/mercedes.mp4?v=5f43f843"
  },
  {
-  "id": "hse-event-design",
-  "url": "https://www.youtube.com/watch?v=dm-oU4t3Mm8",
-  "title": "Что такое ивент-дизайн",
-  "title_en": "What is event design",
+  "id": "hse-potapov",
+  "url": "https://www.youtube.com/watch?v=LleSlts5T3k",
+  "title": "Современная живопись. Владимир Потапов",
+  "title_en": "Contemporary painting. Vladimir Potapov",
   "client": "Школа дизайна НИУ ВШЭ",
   "client_en": "HSE Art and Design School",
   "tags": [
@@ -176,8 +177,8 @@ window.WORKS = [
   ],
   "w": 1280,
   "h": 720,
-  "poster": "media/hse-event-design.jpg?v=ef67bd04",
-  "loop": "media/hse-event-design_loop.mp4?v=b6a1b9cf"
+  "poster": "media/hse-potapov.jpg?v=96ea1c6b",
+  "loop": "media/hse-potapov_loop.mp4?v=1c37a6a1"
  },
  {
   "w": 1920,
@@ -236,10 +237,10 @@ window.WORKS = [
   "loop": "media/tinto_loop.mp4?v=e98aef7f"
  },
  {
-  "id": "hse-potapov",
-  "url": "https://www.youtube.com/watch?v=LleSlts5T3k",
-  "title": "Современная живопись. Владимир Потапов",
-  "title_en": "Contemporary painting. Vladimir Potapov",
+  "id": "hse-event-design",
+  "url": "https://www.youtube.com/watch?v=dm-oU4t3Mm8",
+  "title": "Что такое ивент-дизайн",
+  "title_en": "What is event design",
   "client": "Школа дизайна НИУ ВШЭ",
   "client_en": "HSE Art and Design School",
   "tags": [
@@ -248,8 +249,8 @@ window.WORKS = [
   ],
   "w": 1280,
   "h": 720,
-  "poster": "media/hse-potapov.jpg?v=96ea1c6b",
-  "loop": "media/hse-potapov_loop.mp4?v=1c37a6a1"
+  "poster": "media/hse-event-design.jpg?v=ef67bd04",
+  "loop": "media/hse-event-design_loop.mp4?v=b6a1b9cf"
  },
  {
   "id": "suite",

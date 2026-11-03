@@ -39,7 +39,12 @@
   const field = document.getElementById("field");
   const tagsEl = document.getElementById("tags");
   const canHover = matchMedia("(hover: hover)").matches;
-  let current = "all";
+  // Ссылка с тегом (savchenkofilm.github.io/#ai) открывает страницу сразу с этим фильтром.
+  const fromHash = () => {
+    const key = location.hash.slice(1);
+    return TAGS.some(([k]) => k === key) && works.some((w) => w.tags.includes(key)) ? key : "all";
+  };
+  let current = fromHash();
 
   // Детерминированный рандом: одна и та же раскладка при каждой загрузке.
   function rng(seed) {
@@ -69,8 +74,13 @@
     tagsEl.append(b);
   });
 
+  addEventListener("hashchange", () => {
+    if (fromHash() !== current) setFilter(fromHash());
+  });
+
   function setFilter(key) {
     current = current === key ? "all" : key;
+    history.replaceState(null, "", current === "all" ? location.pathname + location.search : "#" + current);
     tagsEl.querySelectorAll(".tag").forEach((b) => b.setAttribute("aria-pressed", b.dataset.tag === current));
     layout();
   }
@@ -188,6 +198,8 @@
   function inZone(w, s, span, cols, aiSoon) {
     if (current !== "all" || cols < 8) return true;
     // "zone": "middle" в works.json — полу-AI работы держатся по центру.
+    // "pin": "left" в works.json — карточка всегда у левого края (Щербаков под Флоренским).
+    if (w.pin === "left") return s === 0;
     if (w.zone === "middle") return s >= Math.floor(cols * 0.25) && s + span <= Math.ceil(cols * 0.7);
     if (w.tags.includes("ai")) return s >= Math.max(cols / 2, cols - span - 2) || s === cols - span;
     return !aiSoon || s + span <= Math.max(span, Math.ceil(cols * 0.65));
@@ -231,18 +243,26 @@
           min = m;
         }
       }
-      const width = span * unit - gutter;
-      const height = width * (c.w.h / c.w.w);
       const near = tops.filter((t) => t[1] <= min + unit * 0.3);
       // Первый ряд и крупные карточки встают к краю (арт слева, AI справа): так над ними не остаётся дыр.
-      const [s, top] =
+      let [s, top] =
         min === 0 || c.w.big
           ? near[isAi(c) ? near.length - 1 : 0]
           : pick(r, near);
+      // Если рядом остаётся щель, в которую не влезет другая карточка, карточка растягивается на неё.
+      let a = s, b = s + span;
+      while (a > 0 && sky[a - 1] <= top) a--;
+      while (b < cols && sky[b] <= top) b++;
+      if (!c.w.big && b - a > span && b - a <= want + 2 && b - a - span < Math.min(...options)) {
+        s = a;
+        span = b - a;
+      }
+      const width = span * unit - gutter;
+      const height = width * (c.w.h / c.w.w);
 
       const y = top + (top === 0 ? r() * unit * 0.3 : gutter + r() * unit * 0.25);
-      // Сдвиг вправо только если соседняя колонка на этой высоте свободна.
-      const room = s + span < cols && sky[s + span] <= y ? unit * 0.6 : 0;
+      // Сдвиг вправо только если соседняя колонка на этой высоте свободна; крупные не сдвигаются, чтобы не запирать дыру над соседом.
+      const room = !c.w.big && s + span < cols && sky[s + span] <= y ? unit * 0.6 : 0;
       const x = s * unit + r() * room;
       const bottom = y + height;
       for (let k = s; k < s + span; k++) sky[k] = bottom;
