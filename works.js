@@ -124,7 +124,7 @@ window.WORKS = [
   "client": "Школа дизайна НИУ ВШЭ",
   "client_en": "HSE Art and Design School",
   "tags": [
-   "head"
+   "podcast"
   ],
   "w": 960,
   "h": 720,
@@ -302,12 +302,26 @@ window.WORKS = [
   "client": "Школа дизайна НИУ ВШЭ",
   "client_en": "HSE Art and Design School",
   "tags": [
-   "head"
+   "podcast"
   ],
   "w": 1280,
   "h": 720,
   "poster": "media/hse-kashirin.jpg?v=fbeed56f",
   "loop": "media/hse-kashirin_loop.mp4?v=241d5564"
+ },
+ {
+  "id": "fuck-party",
+  "title": "Fuck Event Party",
+  "title_en": "Fuck Event Party",
+  "client": "",
+  "tags": [
+   "event"
+  ],
+  "w": 1920,
+  "h": 1080,
+  "poster": "media/fuck-party.jpg?v=9567d11f",
+  "loop": "media/fuck-party_loop.mp4?v=6b5fec92",
+  "video": "media/fuck-party.mp4?v=edf7f723"
  },
  {
   "w": 1,

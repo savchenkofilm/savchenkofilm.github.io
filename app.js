@@ -6,6 +6,7 @@
     ["event", "События", "Events"],
     ["ai", "AI", "AI"],
     ["head", "Говорящая голова", "Talking head"],
+    ["podcast", "Подкасты", "Podcasts"],
     ["anim", "Анимация", "Animation"],
   ];
   const I18N = {
