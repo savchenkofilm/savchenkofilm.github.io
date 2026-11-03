@@ -171,7 +171,9 @@
     const r = w.w / w.h;
     const kind = r > 1.25 ? "h" : r < 0.8 ? "v" : "s";
     const list =
-      cols >= 12
+      cols >= 16
+        ? { h: [4, 5, 6, 6, 7], s: [3, 4, 4, 5], v: [3, 3, 4] }[kind]
+        : cols >= 12
         ? { h: [3, 4, 4, 5, 6], s: [2, 3, 3, 4], v: [2, 2, 3] }[kind]
         : cols >= 8
         ? { h: [4, 5, 5], s: [3], v: [2, 3] }[kind]
@@ -181,41 +183,63 @@
   }
 
   // В общей выкладке AI-работы держатся справа, остальные — слева и в центре.
-  function inZone(w, s, span, cols) {
+  // Правая зона бронируется, только если AI-работа идёт в ближайших карточках, иначе низ пустеет.
+  function inZone(w, s, span, cols, aiSoon) {
     if (current !== "all" || cols < 8) return true;
     if (w.tags.includes("ai")) return s >= Math.max(cols / 2, cols - span - 2) || s === cols - span;
-    return s + span <= Math.max(span, Math.ceil(cols * 0.65));
+    return !aiSoon || s + span <= Math.max(span, Math.ceil(cols * 0.65));
   }
 
   function layout() {
     const W = field.clientWidth;
-    const cols = W >= 1000 ? 12 : W >= 640 ? 8 : 4;
+    const cols = W >= 1500 ? 16 : W >= 1000 ? 12 : W >= 640 ? 8 : 4;
     const unit = W / cols;
     const gutter = W >= 640 ? 18 : 10;
     const sky = new Array(cols).fill(0);
     const r = rng(hash(current + cols));
 
-    cards.forEach((c) => {
+    const isAi = (c) => c.w.tags.includes("ai");
+    cards.forEach((c, i) => {
+      const aiSoon = cards.slice(i + 1, i + 4).some(isAi);
       const on = current === "all" || c.w.tags.includes(current);
       c.el.classList.toggle("out", !on);
       if (!on) {
         stopLoop(c.el);
         return;
       }
-      const span = Math.min(cols, pick(rng(hash(c.w.id + cols)), spansFor(c.w, cols)));
+      const options = spansFor(c.w, cols);
+      const want = Math.min(cols, pick(rng(hash(c.w.id + cols)), options));
+      const topsFor = (span) => {
+        const t = [];
+        for (let s = 0; s + span <= cols; s++)
+          if (inZone(c.w, s, span, cols, aiSoon)) t.push([s, Math.max(...sky.slice(s, s + span))]);
+        return t;
+      };
+      // Если карточка поменьше встаёт заметно выше — берём её, чтобы закрыть дыру.
+      let span = want;
+      let tops = topsFor(want);
+      let min = Math.min(...tops.map((t) => t[1]));
+      for (let sp = want - 1; sp >= Math.max(2, Math.min(...options) - 1) && !c.w.big; sp--) {
+        const t = topsFor(sp);
+        const m = Math.min(...t.map((x) => x[1]));
+        if (m < min - unit * 0.8) {
+          span = sp;
+          tops = t;
+          min = m;
+        }
+      }
       const width = span * unit - gutter;
       const height = width * (c.w.h / c.w.w);
+      const near = tops.filter((t) => t[1] <= min + unit * 0.3);
+      // Первый ряд набирается от краёв (арт слева, AI справа), чтобы стартовый экран был плотным.
+      const [s, top] =
+        min === 0
+          ? near[isAi(c) ? near.length - 1 : 0]
+          : pick(r, near);
 
-      const tops = [];
-      for (let s = 0; s + span <= cols; s++)
-        if (inZone(c.w, s, span, cols)) tops.push([s, Math.max(...sky.slice(s, s + span))]);
-      const min = Math.min(...tops.map((t) => t[1]));
-      const near = tops.filter((t) => t[1] <= min + unit * 1.4);
-      const [s, top] = pick(r, near);
-
-      const y = top + (top === 0 ? r() * unit * 0.5 : gutter + r() * unit * 0.6);
+      const y = top + (top === 0 ? r() * unit * 0.3 : gutter + r() * unit * 0.25);
       // Сдвиг вправо только если соседняя колонка на этой высоте свободна.
-      const room = s + span < cols && sky[s + span] <= y ? unit * 0.8 : 0;
+      const room = s + span < cols && sky[s + span] <= y ? unit * 0.6 : 0;
       const x = s * unit + r() * room;
       const bottom = y + height;
       for (let k = s; k < s + span; k++) sky[k] = bottom;
