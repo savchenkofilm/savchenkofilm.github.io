@@ -7,6 +7,8 @@ window.WORKS = [
    "art",
    "ai"
   ],
+  "title_en": "Therapy",
+  "client_en": "AI short film",
   "w": 1660,
   "h": 1244,
   "poster": "media/therapy.jpg",
@@ -23,7 +25,9 @@ window.WORKS = [
   "tags": [
    "ads"
   ],
-  "poster": "media/vimeo_709500040.jpg"
+  "poster": "media/vimeo_709500040.jpg",
+  "title_en": "Shcherbakov × MegaFon",
+  "client_en": "MegaFon"
  },
  {
   "id": "visarun",
@@ -33,6 +37,8 @@ window.WORKS = [
    "ads",
    "head"
   ],
+  "title_en": "No more visa runs",
+  "client_en": "TAI",
   "w": 1080,
   "h": 1920,
   "poster": "media/visarun.jpg",
@@ -59,6 +65,7 @@ window.WORKS = [
    "art",
    "ai"
   ],
+  "title_en": "Niva. The ramp",
   "w": 2160,
   "h": 3840,
   "poster": "media/niva-roadster.jpg",
@@ -75,7 +82,9 @@ window.WORKS = [
   "tags": [
    "ads"
   ],
-  "poster": "media/vimeo_359290004.jpg"
+  "poster": "media/vimeo_359290004.jpg",
+  "title_en": "Skate. Maxim Kruglov",
+  "client_en": "MegaFon"
  },
  {
   "w": 4096,
@@ -87,7 +96,9 @@ window.WORKS = [
   "tags": [
    "ads"
   ],
-  "poster": "media/vimeo_429153343.jpg"
+  "poster": "media/vimeo_429153343.jpg",
+  "title_en": "Usadba Jazz",
+  "client_en": "S7 Airlines"
  },
  {
   "id": "emu",
@@ -97,6 +108,8 @@ window.WORKS = [
    "anim",
    "ai"
   ],
+  "title_en": "The Emu War",
+  "client_en": "Events of the 20th century",
   "w": 1080,
   "h": 1920,
   "poster": "media/emu.jpg",
@@ -124,6 +137,7 @@ window.WORKS = [
   "tags": [
    "head"
   ],
+  "title_en": "Alumni Talk #3. Polina Ushakova",
   "w": 1280,
   "h": 720,
   "poster": "media/alumni-ushakova.jpg",
@@ -137,6 +151,7 @@ window.WORKS = [
    "art",
    "ai"
   ],
+  "title_en": "Niva. The city",
   "w": 1660,
   "h": 1244,
   "poster": "media/niva-vibe.jpg",
@@ -153,7 +168,9 @@ window.WORKS = [
   "tags": [
    "ads"
   ],
-  "poster": "media/vimeo_359289821.jpg"
+  "poster": "media/vimeo_359289821.jpg",
+  "title_en": "Street football. Jean-Pierre Papin",
+  "client_en": "MegaFon"
  },
  {
   "w": 3840,
@@ -175,6 +192,7 @@ window.WORKS = [
    "art",
    "ai"
   ],
+  "title_en": "Suit on the wing",
   "w": 2160,
   "h": 3840,
   "poster": "media/suite.jpg",
@@ -204,7 +222,9 @@ window.WORKS = [
   "tags": [
    "ads"
   ],
-  "poster": "media/vimeo_359289722.jpg"
+  "poster": "media/vimeo_359289722.jpg",
+  "title_en": "BMX. Max Chuprina",
+  "client_en": "MegaFon"
  },
  {
   "w": 1920,

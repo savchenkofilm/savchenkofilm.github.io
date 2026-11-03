@@ -1,12 +1,36 @@
 (() => {
   const TAGS = [
-    ["all", "Все"],
-    ["art", "Художественные"],
-    ["ads", "Реклама"],
-    ["ai", "AI"],
-    ["head", "Говорящая голова"],
-    ["anim", "Анимация"],
+    ["all", "Все", "All"],
+    ["art", "Художественные", "Art"],
+    ["ads", "Реклама", "Commercial"],
+    ["ai", "AI", "AI"],
+    ["head", "Говорящая голова", "Talking head"],
+    ["anim", "Анимация", "Animation"],
   ];
+  const I18N = {
+    ru: {
+      name: "Константин <em>Савченко</em>",
+      tagline: "Режиссёр, монтажёр, AI-видео",
+      title: "Константин Савченко — видео",
+      close: "Закрыть",
+      filter: "Фильтр по тегам",
+    },
+    en: {
+      name: "Konstantin <em>Savchenko</em>",
+      tagline: "Director, editor, AI video",
+      title: "Konstantin Savchenko — video",
+      close: "Close",
+      filter: "Filter by tag",
+    },
+  };
+  const LANG_KEY = "lang";
+  let lang;
+  try {
+    lang = localStorage.getItem(LANG_KEY);
+  } catch (e) {}
+  if (!I18N[lang]) lang = (navigator.language || "").toLowerCase().startsWith("ru") ? "ru" : "en";
+  // Поле работы на текущем языке: title_en / client_en, если заданы.
+  const txt = (w, key) => (lang === "en" && w[key + "_en"]) || w[key] || "";
   const works = window.WORKS || [];
   let cards = [];
   const vimeoId = (w) => ((w.url || "").match(/vimeo\.com\/(?:video\/)?(\d+)/) || [])[1];
@@ -31,14 +55,14 @@
   // ---------- теги ----------
   const counts = {};
   works.forEach((w) => w.tags.forEach((t) => (counts[t] = (counts[t] || 0) + 1)));
-  TAGS.forEach(([key, label]) => {
+  TAGS.forEach(([key]) => {
     const n = key === "all" ? works.length : counts[key] || 0;
     if (!n) return;
     const b = document.createElement("button");
     b.className = "tag";
     b.dataset.tag = key;
     b.setAttribute("aria-pressed", key === current);
-    b.innerHTML = `${label}<sup>${n}</sup>`;
+    b.dataset.count = n;
     b.onclick = () => setFilter(key);
     tagsEl.append(b);
   });
@@ -65,10 +89,8 @@
     const el = document.createElement("button");
     el.className = "card";
     el.type = "button";
-    el.setAttribute("aria-label", w.title + (w.client ? `, ${w.client}` : ""));
     el.innerHTML =
-      (w.poster ? `<img src="${w.poster}" alt="" loading="lazy" decoding="async">` : "") +
-      `<div class="cap"><b>${w.title}</b>${w.client ? `<span>${w.client}</span>` : ""}</div>`;
+      (w.poster ? `<img src="${w.poster}" alt="" loading="lazy" decoding="async">` : "") + `<div class="cap"></div>`;
     el.onclick = () => openViewer(w);
     if (w.loop || (canHover && vimeoId(w))) {
       if (canHover) {
@@ -110,6 +132,38 @@
     if (v) v.pause();
     el.querySelector("iframe")?.remove();
   }
+
+  // ---------- язык ----------
+  function renderText() {
+    const d = I18N[lang];
+    document.documentElement.lang = lang;
+    document.title = d.title;
+    document.getElementById("name").innerHTML = d.name;
+    document.getElementById("tagline").textContent = d.tagline;
+    document.getElementById("viewer-close").setAttribute("aria-label", d.close);
+    tagsEl.setAttribute("aria-label", d.filter);
+    tagsEl.querySelectorAll(".tag").forEach((b) => {
+      const t = TAGS.find((t) => t[0] === b.dataset.tag);
+      b.innerHTML = `${lang === "en" ? t[2] : t[1]}<sup>${b.dataset.count}</sup>`;
+    });
+    cards.forEach(({ el, w }) => {
+      const title = txt(w, "title");
+      const client = txt(w, "client");
+      el.setAttribute("aria-label", title + (client ? `, ${client}` : ""));
+      el.querySelector(".cap").innerHTML = `<b>${title}</b>${client ? `<span>${client}</span>` : ""}`;
+    });
+    document.querySelectorAll("[data-lang]").forEach((b) => b.setAttribute("aria-pressed", b.dataset.lang === lang));
+  }
+  document.querySelectorAll("[data-lang]").forEach((b) =>
+    b.addEventListener("click", () => {
+      lang = b.dataset.lang;
+      try {
+        localStorage.setItem(LANG_KEY, lang);
+      } catch (e) {}
+      renderText();
+    })
+  );
+  renderText();
 
   // ---------- раскладка «разброс с воздухом» ----------
   function spansFor(w, cols) {
@@ -195,14 +249,15 @@
     const src = embedFor(w);
     stage.style.setProperty("--r", w.w / w.h);
     if (src) {
-      stage.innerHTML = `<iframe src="${src}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="${w.title}"></iframe>`;
+      stage.innerHTML = `<iframe src="${src}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="${txt(w, "title")}"></iframe>`;
     } else if (w.video) {
       stage.innerHTML = `<video src="${w.video}" controls autoplay playsinline poster="${w.poster || ""}"></video>`;
     } else if (w.url) {
       window.open(w.url, "_blank", "noopener");
       return;
     }
-    cap.innerHTML = `<b>${w.title}</b>${w.client ? ` — ${w.client}` : ""}`;
+    const client = txt(w, "client");
+    cap.innerHTML = `<b>${txt(w, "title")}</b>${client ? ` — ${client}` : ""}`;
     viewer.hidden = false;
     document.body.style.overflow = "hidden";
     document.getElementById("viewer-close").focus();
