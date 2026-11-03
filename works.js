@@ -11,9 +11,9 @@ window.WORKS = [
   "big": true,
   "w": 2160,
   "h": 3840,
-  "poster": "media/florensky.jpg",
-  "loop": "media/florensky_loop.mp4",
-  "video": "media/florensky.mp4"
+  "poster": "media/florensky.jpg?v=02216502",
+  "loop": "media/florensky_loop.mp4?v=4f147aa8",
+  "video": "media/florensky.mp4?v=0ecdba4e"
  },
  {
   "id": "therapy",
@@ -27,9 +27,9 @@ window.WORKS = [
   "client_en": "AI short film",
   "w": 1660,
   "h": 1244,
-  "poster": "media/therapy.jpg",
-  "loop": "media/therapy_loop.mp4",
-  "video": "media/therapy.mp4"
+  "poster": "media/therapy.jpg?v=45adf1d1",
+  "loop": "media/therapy_loop.mp4?v=94a89159",
+  "video": "media/therapy.mp4?v=a9a3c3c9"
  },
  {
   "w": 3840,
@@ -54,8 +54,8 @@ window.WORKS = [
   "title_en": "Alumni Talk #3. Polina Ushakova",
   "w": 1280,
   "h": 720,
-  "poster": "media/alumni-ushakova.jpg",
-  "loop": "media/alumni-ushakova_loop.mp4"
+  "poster": "media/alumni-ushakova.jpg?v=b08c1112",
+  "loop": "media/alumni-ushakova_loop.mp4?v=e0c067aa"
  },
  {
   "id": "niva-vibe",
@@ -68,9 +68,9 @@ window.WORKS = [
   "title_en": "Niva. The city",
   "w": 1660,
   "h": 1244,
-  "poster": "media/niva-vibe.jpg",
-  "loop": "media/niva-vibe_loop.mp4",
-  "video": "media/niva-vibe.mp4"
+  "poster": "media/niva-vibe.jpg?v=512214d7",
+  "loop": "media/niva-vibe_loop.mp4?v=08dde7b3",
+  "video": "media/niva-vibe.mp4?v=a1218d09"
  },
  {
   "id": "404zero",
@@ -83,8 +83,8 @@ window.WORKS = [
   ],
   "w": 360,
   "h": 450,
-  "poster": "media/404zero.jpg",
-  "loop": "media/404zero_loop.mp4"
+  "poster": "media/404zero.jpg?v=921300ef",
+  "loop": "media/404zero_loop.mp4?v=ad9c7f1f"
  },
  {
   "id": "neklessa",
@@ -96,9 +96,9 @@ window.WORKS = [
   ],
   "w": 1080,
   "h": 1920,
-  "poster": "media/neklessa.jpg",
-  "loop": "media/neklessa_loop.mp4",
-  "video": "media/neklessa.mp4"
+  "poster": "media/neklessa.jpg?v=3c727bfb",
+  "loop": "media/neklessa_loop.mp4?v=519d0ed1",
+  "video": "media/neklessa.mp4?v=de820352"
  },
  {
   "id": "mercedes",
@@ -112,9 +112,9 @@ window.WORKS = [
   "zone": "middle",
   "w": 2160,
   "h": 3840,
-  "poster": "media/mercedes.jpg",
-  "loop": "media/mercedes_loop.mp4",
-  "video": "media/mercedes.mp4"
+  "poster": "media/mercedes.jpg?v=43080c40",
+  "loop": "media/mercedes_loop.mp4?v=50f4e886",
+  "video": "media/mercedes.mp4?v=5f43f843"
  },
  {
   "id": "niva-roadster",
@@ -127,9 +127,9 @@ window.WORKS = [
   "title_en": "Niva. The ramp",
   "w": 2160,
   "h": 3840,
-  "poster": "media/niva-roadster.jpg",
-  "loop": "media/niva-roadster_loop.mp4",
-  "video": "media/niva-roadster.mp4"
+  "poster": "media/niva-roadster.jpg?v=d28a9a56",
+  "loop": "media/niva-roadster_loop.mp4?v=5a6e31d8",
+  "video": "media/niva-roadster.mp4?v=fc745668"
  },
  {
   "w": 1920,
@@ -185,8 +185,8 @@ window.WORKS = [
   ],
   "w": 1280,
   "h": 720,
-  "poster": "media/tinto.jpg",
-  "loop": "media/tinto_loop.mp4"
+  "poster": "media/tinto.jpg?v=ad9eb06f",
+  "loop": "media/tinto_loop.mp4?v=e98aef7f"
  },
  {
   "id": "suite",
@@ -199,9 +199,9 @@ window.WORKS = [
   "title_en": "Suit on the wing",
   "w": 2160,
   "h": 3840,
-  "poster": "media/suite.jpg",
-  "loop": "media/suite_loop.mp4",
-  "video": "media/suite.mp4"
+  "poster": "media/suite.jpg?v=c9dd9d65",
+  "loop": "media/suite_loop.mp4?v=e34971bf",
+  "video": "media/suite.mp4?v=6b21ab5e"
  },
  {
   "w": 1920,
@@ -273,8 +273,8 @@ window.WORKS = [
   "client_en": "Events of the 20th century",
   "w": 1080,
   "h": 1920,
-  "poster": "media/emu.jpg",
-  "loop": "media/emu_loop.mp4",
-  "video": "media/emu.mp4"
+  "poster": "media/emu.jpg?v=6c1cbbdb",
+  "loop": "media/emu_loop.mp4?v=0582a481",
+  "video": "media/emu.mp4?v=dfb0b661"
  }
 ];

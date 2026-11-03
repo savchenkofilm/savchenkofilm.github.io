@@ -42,6 +42,12 @@ def even_scale(w, h, long_side):
     return f"scale='if(gt(iw,ih),{long_side},-2)':'if(gt(iw,ih),-2,{long_side})'"
 
 
+def versioned(path):
+    """media/<file>?v=<хэш>: пересобранный файл с тем же именем браузер не возьмёт из кэша."""
+    digest = hashlib.md5(path.read_bytes()).hexdigest()[:8]
+    return f"media/{path.name}?v={digest}"
+
+
 def build(work):
     wid = work["id"]
     src = (ROOT / work["src"]).resolve()
@@ -77,9 +83,9 @@ def build(work):
 
     build_only = ("src", "poster_file", "poster_at", "loop_at", "loop_len")
     out = {**{k: v for k, v in work.items() if k not in build_only},
-           "w": w, "h": h, "poster": f"media/{wid}.jpg", "loop": f"media/{wid}_loop.mp4"}
+           "w": w, "h": h, "poster": versioned(poster), "loop": versioned(loop)}
     if "url" not in work:
-        out["video"] = f"media/{wid}.mp4"
+        out["video"] = versioned(full)
     return out
 
 
