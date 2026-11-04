@@ -142,6 +142,9 @@ window.WORKS = [
    "ai"
   ],
   "title_en": "Niva. The ramp",
+  "sink": [
+   "ai"
+  ],
   "w": 2160,
   "h": 3840,
   "poster": "media/niva-roadster.jpg?v=d28a9a56",

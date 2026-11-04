@@ -283,8 +283,11 @@
     const r = rng(hash(current + cols));
 
     const isAi = (c) => c.w.tags.includes("ai");
-    cards.forEach((c, i) => {
-      const aiSoon = cards.slice(i + 1, i + 4).some(isAi);
+    // sink: ["ai"] — в этой вкладке работа уходит в конец, во «Всех» стоит на своём месте.
+    const sunk = (c) => (c.w.sink || []).includes(current);
+    const order = [...cards.filter((c) => !sunk(c)), ...cards.filter(sunk)];
+    order.forEach((c, i) => {
+      const aiSoon = order.slice(i + 1, i + 4).some(isAi);
       const on = current === "all" || c.w.tags.includes(current);
       c.el.classList.toggle("out", !on);
       if (!on) {
