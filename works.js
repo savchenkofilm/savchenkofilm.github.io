@@ -47,7 +47,7 @@ window.WORKS = [
   "h": 1244,
   "poster": "media/therapy.jpg?v=45adf1d1",
   "loop": "media/therapy_loop.mp4?v=94a89159",
-  "video": "media/therapy.mp4?v=a9a3c3c9"
+  "video": "media/therapy.mp4?v=c607edd9"
  },
  {
   "id": "alumni-ushakova",

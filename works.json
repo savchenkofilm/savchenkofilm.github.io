@@ -1,7 +1,7 @@
 [
   {"id": "florensky", "src": "../my_works/reels_Odra_Florensky.mov", "title": "Иван Флоренский", "title_en": "Ivan Florensky", "client": "Odra", "tags": ["art", "head"], "poster_file": "../my_works/Still 2026-11-03 200235_8.1.1.png", "loop_at": 2.5, "big": true, "loop_len": 6},
   {"id": "megafon-shcherbakov", "url": "https://vimeo.com/709500040", "title": "Щербаков × МегаФон", "client": "МегаФон", "tags": ["ads", "head", "art"], "poster": "media/vimeo_709500040.jpg", "w": 1920, "h": 1536, "title_en": "Shcherbakov × MegaFon", "client_en": "MegaFon", "big": true, "pin": "left"},
-  {"id": "therapy", "src": "../my_works/therapy.mov", "title": "Терапия", "client": "AI-короткометражка", "tags": ["art", "ai"], "title_en": "Therapy", "client_en": "AI short film", "poster_at": 8.3, "loop_at": 8.0, "loop_len": 5},
+  {"id": "therapy", "src": "../my_works/therapy2.mov", "title": "Терапия", "client": "AI-короткометражка", "tags": ["art", "ai"], "title_en": "Therapy", "client_en": "AI short film", "poster_at": 8.3, "loop_at": 8.0, "loop_len": 5},
   {"id": "alumni-ushakova", "url": "https://vimeo.com/865538958", "title": "Alumni Talk #3. Полина Ушакова", "client": "", "tags": ["head"], "title_en": "Alumni Talk #3. Polina Ushakova", "src": "_vimeo_src/865538958.mp4", "poster_file": "media/vimeo_865538958.jpg"},
   {"id": "the-mato", "url": "https://vimeo.com/732263148", "title": "The Mato", "client": "", "tags": ["ads"], "poster": "media/vimeo_732263148.jpg", "w": 3840, "h": 2160},
   {"id": "niva-vibe", "src": "../my_works/niva_vibe.mov", "title": "Нива. Город", "client": "", "tags": ["art", "ai"], "title_en": "Niva. The city"},
