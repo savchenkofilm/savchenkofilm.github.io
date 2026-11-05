@@ -259,6 +259,8 @@
         ? { h: [4, 5, 5], s: [3], v: [2, 3] }[kind]
         : { h: [4, 4, 3], s: [2], v: [2] }[kind];
     // "big": true в works.json — карточка на ступень крупнее максимума.
+    // "small": true — ролик в низком разрешении, карточка мельче обычной.
+    if (w.small) return [Math.max(2, Math.round(Math.min(...list) * 0.7))];
     return w.big ? [Math.max(...list) + 1] : list;
   }
 
@@ -329,7 +331,7 @@
       let a = s, b = s + span;
       while (a > 0 && sky[a - 1] <= top) a--;
       while (b < cols && sky[b] <= top) b++;
-      if (!c.w.big && b - a > span && b - a <= want + 2 && b - a - span < Math.min(...options)) {
+      if (!c.w.big && !c.w.small && b - a > span && b - a <= want + 2 && b - a - span < Math.min(...options)) {
         s = a;
         span = b - a;
       }

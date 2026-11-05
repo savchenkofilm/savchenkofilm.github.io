@@ -207,6 +207,7 @@ window.WORKS = [
    "ai"
   ],
   "view_scale": 0.7,
+  "small": true,
   "w": 2160,
   "h": 3840,
   "poster": "media/future.jpg?v=2f9c351e",
