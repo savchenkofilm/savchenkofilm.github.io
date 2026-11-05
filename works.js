@@ -146,6 +146,7 @@ window.WORKS = [
    "ai"
   ],
   "away": "niva-vibe",
+  "sink_last": true,
   "w": 2160,
   "h": 3840,
   "poster": "media/niva-roadster.jpg?v=d28a9a56",
@@ -162,6 +163,9 @@ window.WORKS = [
    "ai"
   ],
   "zone": "middle",
+  "sink": [
+   "ai"
+  ],
   "w": 2160,
   "h": 3840,
   "poster": "media/mercedes.jpg?v=43080c40",
@@ -211,7 +215,7 @@ window.WORKS = [
   "w": 2160,
   "h": 3840,
   "poster": "media/future.jpg?v=2f9c351e",
-  "loop": "media/future_loop.mp4?v=3fd9e669",
+  "loop": "media/future_loop.mp4?v=f834f29d",
   "video": "media/future.mp4?v=c2f6bd3f"
  },
  {

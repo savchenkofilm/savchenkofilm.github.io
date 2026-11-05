@@ -285,9 +285,14 @@
     const r = rng(hash(current + cols));
 
     const isAi = (c) => c.w.tags.includes("ai");
-    // sink: ["ai"] — в этой вкладке работа уходит в конец, во «Всех» стоит на своём месте.
+    // sink: ["ai"] — в этой вкладке работа уходит в конец, во «Всех» стоит на своём месте; sink_last — в самый конец.
     const sunk = (c) => (c.w.sink || []).includes(current);
-    const order = [...cards.filter((c) => !sunk(c)), ...cards.filter(sunk)];
+    const order = [...cards.filter((c) => !sunk(c)), ...cards.filter(sunk).sort((a, b) => (a.w.sink_last ? 1 : 0) - (b.w.sink_last ? 1 : 0))];
+    // swap: {"ai": "<id>"} — в этой вкладке работа меняется местами с указанной.
+    for (const c of order.filter((d) => (d.w.swap || {})[current])) {
+      const i = order.indexOf(c), j = order.findIndex((d) => d.w.id === c.w.swap[current]);
+      if (j >= 0) [order[i], order[j]] = [order[j], order[i]];
+    }
     const spots = {};
     order.forEach((c, i) => {
       const aiSoon = order.slice(i + 1, i + 4).some(isAi);
