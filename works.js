@@ -199,8 +199,8 @@ window.WORKS = [
  },
  {
   "id": "future",
-  "title": "Будущее",
-  "title_en": "Future",
+  "title": "future_loop",
+  "title_en": "future_loop",
   "client": "",
   "tags": [
    "art",
