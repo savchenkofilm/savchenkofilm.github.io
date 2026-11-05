@@ -145,6 +145,7 @@ window.WORKS = [
   "sink": [
    "ai"
   ],
+  "away": "niva-vibe",
   "w": 2160,
   "h": 3840,
   "poster": "media/niva-roadster.jpg?v=d28a9a56",
@@ -195,6 +196,22 @@ window.WORKS = [
    "event"
   ],
   "poster": "media/vimeo_323714806.jpg"
+ },
+ {
+  "id": "future",
+  "title": "Будущее",
+  "title_en": "Future",
+  "client": "",
+  "tags": [
+   "art",
+   "ai"
+  ],
+  "view_scale": 0.7,
+  "w": 2160,
+  "h": 3840,
+  "poster": "media/future.jpg?v=2f9c351e",
+  "loop": "media/future_loop.mp4?v=3fd9e669",
+  "video": "media/future.mp4?v=c2f6bd3f"
  },
  {
   "id": "hse-graduation",

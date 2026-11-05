@@ -286,6 +286,7 @@
     // sink: ["ai"] — в этой вкладке работа уходит в конец, во «Всех» стоит на своём месте.
     const sunk = (c) => (c.w.sink || []).includes(current);
     const order = [...cards.filter((c) => !sunk(c)), ...cards.filter(sunk)];
+    const spots = {};
     order.forEach((c, i) => {
       const aiSoon = order.slice(i + 1, i + 4).some(isAi);
       const on = current === "all" || c.w.tags.includes(current);
@@ -300,7 +301,10 @@
         const t = [];
         for (let s = 0; s + span <= cols; s++)
           if (inZone(c.w, s, span, cols, aiSoon)) t.push([s, Math.max(...sky.slice(s, s + span))]);
-        return t;
+        // away: "<id>" — не вставать в те же колонки, что и та работа (две Нивы друг под другом).
+        const o = spots[c.w.away];
+        const apart = o ? t.filter(([s]) => s + span <= o[0] || s >= o[1]) : t;
+        return apart.length ? apart : t;
       };
       // Если карточка поменьше встаёт заметно выше — берём её, чтобы закрыть дыру.
       let span = want;
@@ -338,6 +342,7 @@
       const x = s * unit + r() * room;
       const bottom = y + height;
       for (let k = s; k < s + span; k++) sky[k] = bottom;
+      spots[c.w.id] = [s, s + span];
       // Сдвинутая вправо карточка частично занимает соседнюю колонку.
       if (x + width > (s + span) * unit - gutter && s + span < cols) sky[s + span] = Math.max(sky[s + span], bottom);
 
@@ -382,6 +387,8 @@
     window.gtag?.("event", "open_video", { video: w.id });
     const src = embedFor(w);
     stage.style.setProperty("--r", w.w / w.h);
+    // view_scale: ролик в низком разрешении показываем меньше, не во весь экран.
+    stage.style.setProperty("--s", w.view_scale || 1);
     if (src) {
       stage.innerHTML = `<iframe src="${src}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="${txt(w, "title")}"></iframe>`;
     } else if (w.video) {

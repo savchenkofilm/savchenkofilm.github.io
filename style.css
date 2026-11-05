@@ -149,7 +149,7 @@ a { color: inherit; }
 }
 .viewer[hidden] { display: none; }
 .viewer-stage {
-  width: min(92vw, calc((100vh - 140px) * var(--r, 1.7778)));
+  width: min(92vw, calc((100vh - 140px) * var(--r, 1.7778) * var(--s, 1)));
   aspect-ratio: var(--r, 1.7778);
   background: #000;
 }
