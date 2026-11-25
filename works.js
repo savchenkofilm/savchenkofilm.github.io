@@ -394,20 +394,5 @@ window.WORKS = [
   "poster": "media/vimeo_359289722.jpg",
   "title_en": "BMX. Max Chuprina",
   "client_en": "MegaFon"
- },
- {
-  "id": "emu",
-  "title": "Война с эму",
-  "client": "События XX века",
-  "tags": [
-   "anim"
-  ],
-  "title_en": "The Emu War",
-  "client_en": "Events of the 20th century",
-  "w": 1080,
-  "h": 1920,
-  "poster": "media/emu.jpg?v=6c1cbbdb",
-  "loop": "media/emu_loop.mp4?v=0582a481",
-  "video": "media/emu.mp4?v=dfb0b661"
  }
 ];
